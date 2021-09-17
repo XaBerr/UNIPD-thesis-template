@@ -1,0 +1,26 @@
+\input{template/template.tex}
+\begin{document}
+
+% PRIMA PAGINA
+% \input{corpo/comune/PrimaPagina.tex}
+\includepdf[pages={1}]{coverDEI/cover.pdf}
+\thispagestyle{empty}
+\cleardoublepage
+
+% % PAGINE DI INDICE
+\pagenumbering{roman}
+\input{commons/citation}
+\input{commons/inscription}
+\input{commons/acknowledgement}
+\input{auto-indexes/main}
+\input{auto-indexes/figures}
+\input{auto-indexes/codes}
+
+% % CAPITOLI
+\clearpage{\pagestyle{plain}\cleardoublepage}
+\pagenumbering{arabic}
+\include{chapters/introduction}
+
+\input{auto-indexes/analytical}
+\input{commons/bibliography}
+\end{document}

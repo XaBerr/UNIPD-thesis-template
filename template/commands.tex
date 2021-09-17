@@ -1,0 +1,204 @@
+%*****************
+%* nuovi comandi *
+%*****************
+
+\newcommand{\abs}[1]{\left|#1\right|}                               % modulo
+\newcommand{\dato}{\left|\right.}                                   % probabilit\`{a} condizionata
+\newcommand{\fun}[1]{\mathrm{#1}}                                   % stile funzione
+\newcommand{\imp}{\;\;\Longrightarrow\;\;}                          % implicazione
+\newcommand{\norma}[1]{\left\| #1 \right\|}                         % norma
+\newcommand{\prob}[1]{\mathrm{P}\!\left[#1\right]}                  % probabilit\`{a}
+\newcommand{\expect}[1]{\mathrm{E}\!\left[#1\right]}                % aspettazione
+\newcommand{\sse}{\;\;\Longleftrightarrow\;\;}                      % se e solo se
+\newcommand{\vect}[1]{{\boldsymbol{\mathrm{#1}}}}                   % stile vettore
+\newcommand{\real}[1]{\fun{Re}\left[#1\right]}                      % parte reale
+\newcommand{\imag}[1]{\fun{Im}\left[#1\right]}                      % parte immaginaria
+\newcommand{\Dim}[1]{\fun{dim}\left[#1\right]}                      % dimensione di una matrice
+\newcommand{\Det}[1]{\fun{det}\left[#1\right]}                      % determinante di una matrice
+\newcommand{\Ker}[1]{\fun{ker}\left[#1\right]}                      % ker di una matrice
+\newcommand{\rango}[1]{\fun{rango}\left[#1\right]}                  % rango di una matrice
+\newcommand{\scalare}[2]{\left\langle #1, #2 \right\rangle}         % prodotto scalare
+\newcommand{\blbrace}{\left  \lbrace}                               % parentesi graffa sinistra grande
+\newcommand{\brbrace}{\right \rbrace}                               % parentesi graffa destra grande
+\newcommand{\sinc}{\fun{sinc}}                                      % sinc
+\newcommand{\rect}{\fun{rect}}                                      % rect
+\newcommand{\rcos}{\fun{rcos}}                                      % rcos
+\newcommand{\sgn}{\fun{sgn}}                                        % sgn
+\newcommand{\N}{\mathbb{N}}                                         % insieme dei numeri naturali
+\newcommand{\Z}{\mathbb{Z}}                                         % insieme dei numeri interi
+\newcommand{\Q}{\mathbb{Q}}                                         % insieme dei numeri razionali
+\newcommand{\R}{\mathbb{R}}                                         % insieme dei numeri reali
+\newcommand{\C}{\mathbb{C}}                                         % insieme dei numeri complessi
+\newcommand{\seq}[2][n]{#2_{0}, #2_{1}, \ldots, \, #2_{#1}}         % sequenza
+\newcommand{\Span}[2][n]
+{\fun{span} \blbrace #2_{1}, #2_{2}, \ldots, \, #2_{#1} \brbrace}   % spazio generato
+\newcommand{\ddt}{\frac{\fun{d}}{\fun{dt}}}                         % derivata
+\newcommand{\Div}[2]{#1 \; \mid \; #2}                              % divide
+\newcommand{\MCD}[2]{\fun{MCD}\(#1, #2\)}                           % massimo comun divisore
+\newcommand{\mcm}[2]{\fun{mcm}\(#1, #2\)}                           % minimo comune multiplo
+\newcommand{\goodgap}{
+  \hspace{\subfigtopskip}
+  \hspace{\subfigbottomskip}
+}                                                                   % interlinea opportuna per le sottofigure
+\newcommand{\eng}[1]{\emph{#1}}                                     % inglese
+\newcommand{\virg}[1]{``#1"}                                        % fa una citazione tra virgolette
+\newcommand{\textttvar}[1]{{\ttvar #1}}
+
+% Impostazioni del codice
+\definecolor{darkgreen}{rgb}{0, 0.6, 0}
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{lightgray}{rgb}{0.8, 0.8, 0.8}
+\definecolor{mauve}{rgb}{0.58, 0, 0.82}
+\definecolor{blue}{rgb}{0, 0, 0.82}
+\definecolor{black}{rgb}{0, 0, 0}
+\definecolor{backcolour}{rgb}{0.9, 0.9, 0.9}
+
+\lstset{
+  % backgroundcolor=\color{backcolour},
+  framerule=5px,
+  rulecolor=\color{backcolour},
+  rulesepcolor=\color{backcolour},
+  frameround=tttt,
+  frame=tlrb,
+  language=c++,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{lightgray},
+  stringstyle=\color{darkgreen},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2
+}
+
+\lstdefinelanguage{javascript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{gray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{lightgray}\ttfamily,
+  stringstyle=\color{darkgreen}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+
+\lstdefinelanguage{cmake}{
+  keywords={SET, find_path, find_library, include, find_package_handle_standard_args, HINTS, NAMES, TRUE, FALSE, ON, OFF, message, mark_as_advanced, DEFAULT_MSG, PRIVATE, PUBLIC, \$, find_package, target_include_directories, target_link_libraries},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{gray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{\#},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{lightgray}\ttfamily,
+  stringstyle=\color{darkgreen}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+%****************************
+%* ridefinizioni di comandi *
+%****************************
+
+\renewcommand{\(}{\left(}                                     % parentesi tonda sinistra grande
+\renewcommand{\)}{\right)}                                    % parentesi tonda destra grande
+\renewcommand{\[}{\left[}                                     % parentesi quadra sinistra grande
+\renewcommand{\]}{\right]}                                    % parentesi quadra destra grande
+\renewcommand{\exp}[1]{\fun{e}^{#1}}                          % esponenziale
+\renewcommand{\gcd}[2]{\fun{gcd}\(#1, #2\)}                   % massimo comun divisore
+
+\renewcommand{\lstlistingname}{Codice}
+\renewcommand{\lstlistlistingname}{Elenco dei listati codice}
+
+
+% ALTRI
+\newcommand{\idx}[1]{\index{#1}\textbf{#1}}
+\newcommand{\lvli}[1]{\clearpage{\pagestyle{plain}\cleardoublepage}\chapter{#1}\label{cha:#1}}
+\newcommand{\lvlii}[1]{\section{#1}\label{sec:#1}}
+\newcommand{\lvliii}[1]{\subsection{#1}\label{sec:#1}}
+\newcommand{\lvliv}[1]{\subsubsection{#1}\label{sec:#1}\index{#1}}
+\newcommand{\lvlv}[1]{\paragraph{#1}\label{sec:#1}\index{#1}\mbox{}\\}
+\newcommand{\lvlvi}[1]{\subparagraph{#1}\label{sec:#1}\index{#1}}
+
+\newcommand{\img}[2] {
+  \begin{figure}[H]
+    \includegraphics[width=\linewidth]{img/#1}
+    \caption{#2}
+    \label{fig:#1}
+  \end{figure}
+}
+
+\newcommand{\imgs}[3] {
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=#1]{img/#2}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+\newcommand{\imgTwo}[6]{
+  \begin{figure}[H]
+    \minipage{0.5\textwidth}
+    \centering
+    \includegraphics[scale=#1]{img/#2}
+    \caption{#3}
+    \label{fig:#2}
+    \endminipage\hfill
+    \minipage{0.5\textwidth}
+    \centering
+    \includegraphics[scale=#4]{img/#5}
+    \caption{#6}
+    \label{fig:#5}
+    \endminipage
+  \end{figure}
+}
+
+\newcommand{\imgThree}[9]{
+  \begin{figure}[H]
+    \minipage{0.32\textwidth}
+    \centering
+    \includegraphics[scale=#1]{img/#2}
+    \caption{#3}
+    \label{fig:#2}
+    \endminipage\hfill
+    \minipage{0.32\textwidth}
+    \centering
+    \includegraphics[scale=#4]{img/#5}
+    \caption{#6}
+    \label{fig:#5}
+    \endminipage\hfill
+    \minipage{0.32\textwidth}%
+    \centering
+    \includegraphics[scale=#7]{img/#8}
+    \caption{#9}
+    \label{fig:#8}
+    \endminipage
+  \end{figure}
+}
+
+\newcommand{\fig}[1] {Fig. \ref{fig:#1}}
+\newcommand{\sect}[1] {Sec. \ref{sec:#1}}
+
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%% COMMENTS
+\definecolor{mycolorFede}{HTML}{FF0000}
+\newcommand{\fede}[2]{{\color{mycolorFede}\sout{#1}#2}}
+\newcommand{\fedecom}[1]{\todo[color=mycolorFede!40, inline]{{\it Fede:} #1}}
+
+
+\definecolor{mycolorStudent}{HTML}{00FF00}
+\newcommand{\student}[2]{{\color{mycolorStudent}\sout{#1}#2}}
+\newcommand{\studentcom}[1]{\todo[color=mycolorStudent!40, inline]{{\it Student:} #1}}
